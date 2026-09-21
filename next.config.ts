@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+
   poweredByHeader: false,
-  images: { formats: ["image/avif", "image/webp"] },
+
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
