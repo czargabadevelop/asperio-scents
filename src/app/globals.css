@@ -44,14 +44,15 @@ i { font-weight: 400; }
 .text-link:hover svg { transform: translateX(3px); }
 .announcement { min-height: 30px; display: flex; justify-content: center; align-items: center; gap: 24px; background: #303229; color: #fff; font-size: 12px; letter-spacing: .05em; padding: 7px 20px; }
 .announcement span { color: #d3d3c5; padding-left: 24px; border-left: 1px solid #ffffff40; }
-.site-header { position: sticky; top: 0; z-index: 40; background: var(--color-paper); border-bottom: 1px solid var(--color-line); }
+.site-header { position: sticky; top: 0; z-index: 40; background: #1f4fa3; color: #fff; border-bottom: 1px solid #173c7d; }
+.site-header :focus-visible { outline-color: #fff; }
 .brand-link { display: inline-flex; width: 155px; flex-shrink: 0; }
-.brand-logo { filter: brightness(0); width: 155px; height: auto; }
+.brand-logo { filter: brightness(0) invert(1); width: 155px; height: auto; }
 .nav-link { position: relative; font-size: 13px; padding-block: 15px; }
-.nav-link::after { content: ""; position: absolute; bottom: 7px; left: 0; right: 0; height: 1px; background: #847253; transform: scaleX(0); transition: transform 200ms; }
+.nav-link::after { content: ""; position: absolute; bottom: 7px; left: 0; right: 0; height: 1px; background: #fff; transform: scaleX(0); transition: transform 200ms; }
 .nav-link:hover::after, .nav-link[aria-current="page"]::after { transform: scaleX(1); }
-.header-shop { align-items: center; justify-content: center; gap: 20px; padding: 13px 19px; min-height: 44px; font-size: 13px; border: 1px solid #bdb7a7; transition: background 200ms; }
-.header-shop:hover { background: #ebe8df; }
+.header-shop { align-items: center; justify-content: center; gap: 20px; padding: 13px 19px; min-height: 44px; font-size: 13px; border: 1px solid #ffffff80; transition: background 200ms; }
+.header-shop:hover { background: #173c7d; }
 .hero { display: grid; grid-template-columns: .9fr 1.1fr; min-height: 500px; padding-top: 26px; padding-bottom: 28px; gap: 30px; }
 .hero-copy { padding: 54px 0 31px; display: flex; flex-direction: column; align-items: flex-start; }
 .hero-copy .eyebrow { display: flex; align-items: center; gap: 12px; }
