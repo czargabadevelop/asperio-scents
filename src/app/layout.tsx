@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { WelcomePopup } from "@/components/welcome-popup";
 import { site } from "@/data/catalog";
 import "./globals.css";
 
@@ -21,7 +22,7 @@ export const viewport: Viewport = { themeColor: "#f8f7f3" };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return <html lang="en" className={`${display.variable} ${sans.variable}`}><body>
     <a href="#main" className="skip-link">Skip to content</a>
-    <Header /><main id="main" tabIndex={-1}>{children}</main><Footer />
+    <Header /><main id="main" tabIndex={-1}>{children}</main><Footer /><WelcomePopup />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Organization", name: site.name, url: site.url, logo: `${site.url}/images/logo.webp`, sameAs: ["https://shopee.ph/shop/1929157916"] }).replace(/</g, "\\u003c") }} />
   </body></html>;
 }
